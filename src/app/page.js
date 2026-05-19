@@ -9,9 +9,11 @@ export default function Home() {
         <div className="text-center">
 
           <img
-            src="/profile.jpg"
+            src="/profile.jpeg"
             alt="Profile"
-            className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-blue-500"
+            width="160"
+            height="160"
+            className="rounded-full mx-auto mb-6 border-4 border-blue-500"
           />
 
           <h1 className="text-5xl font-bold mb-4">
