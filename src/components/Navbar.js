@@ -1,16 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="fixed top-0 w-full z-50 backdrop-blur-lg bg-black/30 border-b border-white/10"
-    >
+    <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
 
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
 
@@ -44,6 +38,6 @@ export default function Navbar() {
 
       </div>
 
-    </motion.nav>
+    </nav>
   );
 }

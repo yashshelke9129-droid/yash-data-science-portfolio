@@ -24,27 +24,21 @@ export default function Home() {
           className="w-60 h-60 rounded-full border-4 border-cyan-400 object-cover mb-8 glow float-animation"
         />
 
-        <motion.h1
-          initial={{ y: 50 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-7xl font-bold gradient-text mb-5"
-        >
+        <h1 className="text-7xl font-bold gradient-text mb-5">
           Yash Shelke
-        </motion.h1>
+        </h1>
 
         <p className="text-2xl text-gray-300 mb-8">
           Data Science Student • AI Enthusiast • ML Developer
         </p>
 
-        <div className="glass p-10 rounded-3xl max-w-4xl card-hover">
+        <div className="glass p-10 rounded-3xl max-w-4xl card-hover glow">
 
           <p className="text-lg text-gray-300 leading-9">
             Passionate about Data Science, Artificial Intelligence,
-            Machine Learning, and building futuristic technology solutions.
-            Skilled in Python, Data Analysis, ML Models, and modern web technologies.
-            Constantly exploring new innovations and creating real-world projects
-            with impactful solutions.
+            Machine Learning, and futuristic technologies.
+            Skilled in Python, Data Analysis, ML Models,
+            and building modern AI-driven projects.
           </p>
 
         </div>
