@@ -9,23 +9,37 @@ export default function Projects() {
       <Navbar />
 
       <motion.main
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="min-h-screen px-6 md:px-20 py-32 grid-bg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen px-6 md:px-20 py-32 grid-bg text-white"
       >
 
-        <h1 className="text-6xl font-bold gradient-text mb-16">
+        {/* Heading */}
+
+        <motion.h1
+          initial={{ y: -60, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl md:text-7xl font-bold gradient-text mb-16"
+        >
           My Projects
-        </h1>
+        </motion.h1>
+
+        {/* Projects Grid */}
 
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* Project 1 */}
 
-          <div className="glass glow rounded-3xl p-8 card-hover">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="glass glow rounded-3xl p-8 card-hover"
+          >
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-3xl font-bold mb-5 text-cyan-400">
               Student Result Analysis
             </h2>
 
@@ -33,7 +47,7 @@ export default function Projects() {
               Data analysis project using Python,
               Pandas, NumPy and Matplotlib
               for analyzing student performance
-              and generating insights.
+              and generating meaningful insights.
             </p>
 
             <div className="flex gap-4 flex-wrap">
@@ -56,13 +70,18 @@ export default function Projects() {
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Project 2 */}
 
-          <div className="glass glow rounded-3xl p-8 card-hover">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="glass glow rounded-3xl p-8 card-hover"
+          >
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-3xl font-bold mb-5 text-cyan-400">
               Iris Flower Classification
             </h2>
 
@@ -92,13 +111,18 @@ export default function Projects() {
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Project 3 */}
 
-          <div className="glass glow rounded-3xl p-8 card-hover">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="glass glow rounded-3xl p-8 card-hover"
+          >
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-3xl font-bold mb-5 text-cyan-400">
               Car Price Prediction
             </h2>
 
@@ -128,13 +152,18 @@ export default function Projects() {
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Project 4 */}
 
-          <div className="glass glow rounded-3xl p-8 card-hover">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.4 }}
+            className="glass glow rounded-3xl p-8 card-hover"
+          >
 
-            <h2 className="text-3xl font-bold mb-5">
+            <h2 className="text-3xl font-bold mb-5 text-cyan-400">
               Sales Prediction
             </h2>
 
@@ -164,7 +193,7 @@ export default function Projects() {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

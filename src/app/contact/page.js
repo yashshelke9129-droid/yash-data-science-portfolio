@@ -9,21 +9,33 @@ export default function Contact() {
       <Navbar />
 
       <motion.main
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="min-h-screen px-6 md:px-20 py-32 grid-bg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen px-6 md:px-20 py-32 grid-bg text-white"
       >
 
-        <h1 className="text-6xl font-bold gradient-text mb-16">
+        <motion.h1
+          initial={{ y: -60, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl md:text-7xl font-bold gradient-text mb-16"
+        >
           Contact Me
-        </h1>
+        </motion.h1>
 
-        <div className="glass glow rounded-3xl p-10 max-w-4xl card-hover">
+        <motion.div
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="glass glow rounded-3xl p-10 max-w-4xl card-hover"
+        >
 
           <div className="space-y-10 text-xl">
 
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+            >
               <h2 className="text-cyan-400 font-bold mb-3">
                 Email
               </h2>
@@ -31,9 +43,11 @@ export default function Contact() {
               <p className="text-gray-300">
                 yashshelke9129@gmail.com
               </p>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+            >
               <h2 className="text-cyan-400 font-bold mb-3">
                 Phone
               </h2>
@@ -41,9 +55,11 @@ export default function Contact() {
               <p className="text-gray-300">
                 +91 9136486029
               </p>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+            >
               <h2 className="text-cyan-400 font-bold mb-3">
                 LinkedIn
               </h2>
@@ -55,9 +71,11 @@ export default function Contact() {
               >
                 View LinkedIn Profile
               </a>
-            </div>
+            </motion.div>
 
-            <div>
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+            >
               <h2 className="text-cyan-400 font-bold mb-3">
                 GitHub
               </h2>
@@ -69,11 +87,11 @@ export default function Contact() {
               >
                 View GitHub Profile
               </a>
-            </div>
+            </motion.div>
 
           </div>
 
-        </div>
+        </motion.div>
 
       </motion.main>
     </>

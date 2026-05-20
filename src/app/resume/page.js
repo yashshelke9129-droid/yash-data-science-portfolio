@@ -9,17 +9,27 @@ export default function Resume() {
       <Navbar />
 
       <motion.main
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        className="min-h-screen flex flex-col items-center justify-center px-6 py-32 grid-bg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen flex flex-col items-center justify-center px-6 py-32 grid-bg text-white"
       >
 
-        <h1 className="text-6xl font-bold gradient-text mb-12">
+        <motion.h1
+          initial={{ y: -60, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-6xl md:text-7xl font-bold gradient-text mb-12"
+        >
           Resume
-        </h1>
+        </motion.h1>
 
-        <div className="glass glow rounded-3xl p-12 text-center card-hover">
+        <motion.div
+          initial={{ scale: 0.7, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="glass glow rounded-3xl p-12 text-center card-hover"
+        >
 
           <p className="text-2xl text-gray-300 mb-10">
             View my professional Data Science resume
@@ -33,7 +43,7 @@ export default function Resume() {
             Open Resume
           </a>
 
-        </div>
+        </motion.div>
 
       </motion.main>
     </>
