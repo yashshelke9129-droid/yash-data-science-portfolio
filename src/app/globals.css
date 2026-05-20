@@ -5,6 +5,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: #020617;
   color: white;
   overflow-x: hidden;
@@ -18,14 +20,14 @@ body::before {
   width: 200%;
   height: 200%;
   background:
-    radial-gradient(circle at top left, rgba(37,99,235,0.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(139,92,246,0.18), transparent 30%),
+    radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(139,92,246,0.2), transparent 30%),
     radial-gradient(circle at center, rgba(6,182,212,0.12), transparent 25%);
-  animation: backgroundMove 15s linear infinite;
+  animation: moveBg 15s linear infinite;
   z-index: -1;
 }
 
-@keyframes backgroundMove {
+@keyframes moveBg {
   0% {
     transform: translate(0,0);
   }
@@ -39,6 +41,15 @@ body::before {
   }
 }
 
+/* Grid Effect */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
 /* Gradient Text */
 .gradient-text {
   background: linear-gradient(to right, #3b82f6, #06b6d4, #8b5cf6);
@@ -46,40 +57,49 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-/* Glassmorphism */
+/* Glass Effect */
 .glass {
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Glowing Border */
+/* Glow */
 .glow {
   box-shadow:
     0 0 20px rgba(59,130,246,0.4),
     0 0 40px rgba(139,92,246,0.3);
 }
 
-/* Hover Card */
+/* Hover Cards */
 .card-hover {
   transition: all 0.4s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px) scale(1.02);
   box-shadow:
     0 0 25px rgba(59,130,246,0.35),
     0 0 50px rgba(139,92,246,0.25);
 }
 
-/* Floating */
+/* Button Animation */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.08);
+}
+
+/* Floating Animation */
 @keyframes floating {
   0% {
     transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-15px);
   }
 
   100% {
@@ -89,22 +109,4 @@ body::before {
 
 .float-animation {
   animation: floating 4s ease-in-out infinite;
-}
-
-/* Buttons */
-.btn-hover {
-  transition: all 0.3s ease;
-}
-
-.btn-hover:hover {
-  transform: scale(1.08);
-}
-
-/* Animated Grid */
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-
-  background-size: 40px 40px;
 }

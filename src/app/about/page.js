@@ -12,7 +12,7 @@ export default function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="min-h-screen px-10 py-32 grid-bg"
+        className="min-h-screen px-10 py-32 grid-bg text-white"
       >
 
         <h1 className="text-6xl font-bold gradient-text mb-14">
