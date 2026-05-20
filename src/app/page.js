@@ -1,67 +1,203 @@
 "use client";
 
+import { useState } from "react";
+
+import { signInWithPopup } from "firebase/auth";
+
+import { auth, provider } from "../firebase";
+
 import Navbar from "../components/Navbar";
+
 import { motion } from "framer-motion";
 
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyCigMsRh84wP3tL0pEwnkwL6HU6ASRWm1Q",
+
+  authDomain: "yash-portfolio-808ef.firebaseapp.com",
+
+  projectId: "yash-portfolio-808ef",
+
+  storageBucket: "yash-portfolio-808ef.firebasestorage.app",
+
+  messagingSenderId: "179395855737",
+
+  appId: "1:179395855737:web:d4ad5689950bd6ed005ba8",
+
+  measurementId: "G-RB4J4YCEC9"
+
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
 export default function Home() {
-  return (
-    <>
-      <Navbar />
 
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 grid-bg"
-      >
+  const [user, setUser] = useState(null);
 
-        <motion.img
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-          src="/profile.jpeg"
-          alt="Yash Shelke"
-          className="w-60 h-60 rounded-full border-4 border-cyan-400 object-cover mb-8 glow float-animation"
-        />
+  const handleLogin = async () => {
 
-        <h1 className="text-7xl font-bold gradient-text mb-5">
-          Yash Shelke
-        </h1>
+    try {
 
-        <p className="text-2xl text-gray-300 mb-8">
-          Data Science Student • AI Enthusiast • ML Developer
-        </p>
+      const result = await signInWithPopup(auth, provider);
 
-        <div className="glass p-10 rounded-3xl max-w-4xl card-hover glow">
+      const loggedUser = result.user;
 
-          <p className="text-lg text-gray-300 leading-9">
-            Passionate about Data Science, Artificial Intelligence,
-            Machine Learning, and futuristic technologies.
-            Skilled in Python, Data Analysis, ML Models,
-            and building modern AI-driven projects.
+      await addDoc(collection(db, "visitors"), {
+
+        name: loggedUser.displayName,
+
+        email: loggedUser.email,
+
+        loginTime: new Date().toString()
+
+      });
+
+      setUser(loggedUser);
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  };
+
+  if (!user) {
+
+    return (
+
+      <main className="min-h-screen flex items-center justify-center bg-black text-white px-6">
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="glass glow rounded-3xl p-12 text-center max-w-xl"
+        >
+
+          <h1 className="text-5xl font-bold gradient-text mb-8">
+            Welcome
+          </h1>
+
+          <p className="text-gray-300 text-xl leading-9 mb-10">
+
+            Sign in with Google to access
+            Yash Shelke's Professional
+            Data Science Portfolio.
+
           </p>
 
-        </div>
-
-        <div className="flex gap-6 mt-10">
-
-          <a
-            href="/projects"
-            className="bg-cyan-500 px-8 py-4 rounded-xl text-lg btn-hover glow"
+          <button
+            onClick={handleLogin}
+            className="bg-cyan-500 hover:bg-cyan-400 text-black font-bold px-8 py-4 rounded-2xl transition text-xl"
           >
-            View Projects
-          </a>
+            Continue with Google
+          </button>
 
-          <a
-            href="/about"
-            className="bg-purple-600 px-8 py-4 rounded-xl text-lg btn-hover"
+        </motion.div>
+
+      </main>
+
+    );
+
+  }
+
+  return (
+
+    <>
+
+      <Navbar />
+
+      <main className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-black via-blue-950 to-black text-white overflow-hidden">
+
+        <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="glass glow rounded-3xl p-10 md:p-16 text-center max-w-5xl"
+        >
+
+          {/* Profile Image */}
+
+          <motion.img
+            src="/profile.jpeg"
+            alt="Yash Shelke"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
+            className="w-52 h-52 rounded-full mx-auto border-4 border-cyan-400 shadow-2xl shadow-cyan-500/50 object-cover"
+          />
+
+          {/* Name */}
+
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-6xl md:text-7xl font-bold mt-8"
           >
-            About Me
-          </a>
+            Yash Shelke
+          </motion.h1>
 
-        </div>
+          {/* Role */}
 
-      </motion.main>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-cyan-300 text-2xl mt-6 leading-10"
+          >
+            Data Science Student | Machine Learning Enthusiast |
+            Python Developer | Future AI Engineer
+          </motion.p>
+
+          {/* About */}
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="mt-10 glass rounded-2xl p-8"
+          >
+
+            <h2 className="text-3xl font-bold text-cyan-400 mb-6">
+              About Me
+            </h2>
+
+            <p className="text-gray-300 text-lg leading-9">
+
+              I am currently pursuing TYBSc Computer Science and passionately
+              exploring the world of Data Science, Machine Learning,
+              Artificial Intelligence, and modern technologies.
+
+              <br /><br />
+
+              I enjoy building real-world AI and Data Science projects
+              using Python, Pandas, NumPy, Scikit-learn, React.js,
+              and Next.js.
+
+              <br /><br />
+
+              My goal is to become a highly skilled Data Scientist
+              and AI Engineer capable of building intelligent systems
+              that solve real-world problems.
+
+            </p>
+
+          </motion.div>
+
+        </motion.div>
+
+      </main>
+
     </>
+
   );
+
 }
