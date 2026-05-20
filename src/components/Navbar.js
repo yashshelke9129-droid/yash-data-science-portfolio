@@ -1,37 +1,49 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <nav className="bg-black text-white p-5 flex justify-between items-center border-b border-gray-800">
+    <motion.nav
+      initial={{ y: -80, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7 }}
+      className="fixed top-0 w-full z-50 backdrop-blur-lg bg-black/40 border-b border-white/10"
+    >
 
-      <h1 className="text-2xl font-bold text-blue-500">
-        YS
-      </h1>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
 
-      <ul className="flex gap-6 text-lg">
+        <h1 className="text-2xl font-bold gradient-text">
+          YS Portfolio
+        </h1>
 
-        <li>
-          <Link href="/">Home</Link>
-        </li>
+        <div className="flex gap-8 text-lg">
 
-        <li>
-          <Link href="/about">About</Link>
-        </li>
+          <Link href="/" className="hover:text-blue-400 transition">
+            Home
+          </Link>
 
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
+          <Link href="/about" className="hover:text-blue-400 transition">
+            About
+          </Link>
 
-        <li>
-          <Link href="/resume">Resume</Link>
-        </li>
+          <Link href="/projects" className="hover:text-blue-400 transition">
+            Projects
+          </Link>
 
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
+          <Link href="/resume" className="hover:text-blue-400 transition">
+            Resume
+          </Link>
 
-      </ul>
+          <Link href="/contact" className="hover:text-blue-400 transition">
+            Contact
+          </Link>
 
-    </nav>
+        </div>
+
+      </div>
+
+    </motion.nav>
   );
 }
