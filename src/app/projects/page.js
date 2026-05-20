@@ -13,77 +13,140 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 gap-8">
 
-          <div className="bg-gray-900 p-6 rounded-2xl">
+          {/* Project 1 */}
+          <div className="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+
             <h2 className="text-2xl font-bold mb-4">
               Student Result Analysis
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Analyzed student academic performance using Python,
-              Pandas, and Data Visualization techniques.
+              Data analysis project using Python, Pandas,
+              NumPy, and Matplotlib for analyzing student performance.
             </p>
 
-            <a
-              href="https://github.com/yashshelke9129-droid/student-result-analysis"
-              target="_blank"
-              className="text-blue-400"
-            >
-              View Project →
-            </a>
+            <div className="flex gap-4">
+
+              <a
+                href="https://github.com/yashshelke9129-droid/student-result-analysis"
+                target="_blank"
+                className="bg-blue-500 px-4 py-2 rounded-lg"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="/projects/Result(2).ipynb"
+                download
+                className="bg-green-500 px-4 py-2 rounded-lg"
+              >
+                Download Code
+              </a>
+
+            </div>
+
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-2xl">
+          {/* Project 2 */}
+          <div className="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+
             <h2 className="text-2xl font-bold mb-4">
               Iris Flower Classification
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Machine learning model for predicting iris flower species.
+              Machine learning classification project
+              using Scikit-learn and Python.
             </p>
 
-            <a
-              href="https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
-              target="_blank"
-              className="text-blue-400"
-            >
-              View Project →
-            </a>
+            <div className="flex gap-4">
+
+              <a
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
+                target="_blank"
+                className="bg-blue-500 px-4 py-2 rounded-lg"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="/projects/CodeAlpha_Iris_Flower_Classification.ipynb"
+                download
+                className="bg-green-500 px-4 py-2 rounded-lg"
+              >
+                Download Code
+              </a>
+
+            </div>
+
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-2xl">
+          {/* Project 3 */}
+          <div className="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+
             <h2 className="text-2xl font-bold mb-4">
               Car Price Prediction
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Regression-based ML model for predicting car prices.
+              Regression-based machine learning model
+              for predicting car prices.
             </p>
 
-            <a
-              href="https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
-              target="_blank"
-              className="text-blue-400"
-            >
-              View Project →
-            </a>
+            <div className="flex gap-4">
+
+              <a
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
+                target="_blank"
+                className="bg-blue-500 px-4 py-2 rounded-lg"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="/projects/CodeAlpha_Car_Price_Prediction.ipynb"
+                download
+                className="bg-green-500 px-4 py-2 rounded-lg"
+              >
+                Download Code
+              </a>
+
+            </div>
+
           </div>
 
-          <div className="bg-gray-900 p-6 rounded-2xl">
+          {/* Project 4 */}
+          <div className="bg-gray-900 p-6 rounded-2xl hover:scale-105 transition">
+
             <h2 className="text-2xl font-bold mb-4">
               Sales Prediction
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Sales forecasting project using Machine Learning.
+              Sales forecasting project using
+              Machine Learning and predictive analytics.
             </p>
 
-            <a
-              href="https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
-              target="_blank"
-              className="text-blue-400"
-            >
-              View Project →
-            </a>
+            <div className="flex gap-4">
+
+              <a
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
+                target="_blank"
+                className="bg-blue-500 px-4 py-2 rounded-lg"
+              >
+                GitHub
+              </a>
+
+              <a
+                href="/projects/CodeAlpha_Sales_Prediction.ipynb"
+                download
+                className="bg-green-500 px-4 py-2 rounded-lg"
+              >
+                Download Code
+              </a>
+
+            </div>
+
           </div>
 
         </div>
