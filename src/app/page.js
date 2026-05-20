@@ -9,34 +9,42 @@ export default function Home() {
       <Navbar />
 
       <motion.main
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-32"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 grid-bg"
       >
 
-        <img
+        <motion.img
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
           src="/profile.jpeg"
           alt="Yash Shelke"
-          className="w-56 h-56 rounded-full border-4 border-blue-500 object-cover mb-8 glow float-animation"
+          className="w-60 h-60 rounded-full border-4 border-cyan-400 object-cover mb-8 glow float-animation"
         />
 
-        <h1 className="text-6xl font-bold gradient-text mb-4">
+        <motion.h1
+          initial={{ y: 50 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-7xl font-bold gradient-text mb-5"
+        >
           Yash Shelke
-        </h1>
+        </motion.h1>
 
-        <p className="text-2xl text-gray-300 mb-6">
-          Data Science Student • Machine Learning Enthusiast
+        <p className="text-2xl text-gray-300 mb-8">
+          Data Science Student • AI Enthusiast • ML Developer
         </p>
 
-        <div className="glass rounded-3xl p-8 max-w-4xl card-hover">
+        <div className="glass p-10 rounded-3xl max-w-4xl card-hover">
 
           <p className="text-lg text-gray-300 leading-9">
-            Passionate Data Science student pursuing TYBSc CS,
-            focused on Machine Learning, Artificial Intelligence,
-            Data Analytics, and Python Development.
-            Skilled in building ML projects, analyzing datasets,
-            and creating modern AI-driven solutions.
+            Passionate about Data Science, Artificial Intelligence,
+            Machine Learning, and building futuristic technology solutions.
+            Skilled in Python, Data Analysis, ML Models, and modern web technologies.
+            Constantly exploring new innovations and creating real-world projects
+            with impactful solutions.
           </p>
 
         </div>
@@ -45,16 +53,16 @@ export default function Home() {
 
           <a
             href="/projects"
-            className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-lg btn-hover glow"
+            className="bg-cyan-500 px-8 py-4 rounded-xl text-lg btn-hover glow"
           >
             View Projects
           </a>
 
           <a
-            href="/resume"
-            className="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-xl text-lg btn-hover"
+            href="/about"
+            className="bg-purple-600 px-8 py-4 rounded-xl text-lg btn-hover"
           >
-            View Resume
+            About Me
           </a>
 
         </div>

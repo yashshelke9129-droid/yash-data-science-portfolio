@@ -9,65 +9,66 @@ export default function About() {
       <Navbar />
 
       <motion.main
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="min-h-screen px-10 py-32 text-white"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="min-h-screen px-10 py-32 grid-bg"
       >
 
-        <h1 className="text-5xl font-bold gradient-text mb-12">
+        <h1 className="text-6xl font-bold gradient-text mb-14">
           About Me
         </h1>
 
-        <div className="glass rounded-3xl p-8 mb-10 card-hover">
+        <div className="glass rounded-3xl p-10 mb-10 card-hover">
 
-          <h2 className="text-3xl font-bold mb-5">
+          <h2 className="text-4xl font-bold mb-6">
             Hello, I'm Yash Shelke
           </h2>
 
-          <p className="text-gray-300 leading-9">
-            I am a passionate Data Science student currently pursuing
-            TYBSc CS with strong interest in Machine Learning,
-            Artificial Intelligence, Data Analytics, and Python
-            Development.
+          <p className="text-gray-300 leading-10 text-lg">
+
+            I am a passionate and highly motivated Data Science student
+            currently pursuing TYBSc Computer Science.
+            I have a strong interest in Machine Learning,
+            Artificial Intelligence, Data Analytics,
+            and modern software technologies.
+
             <br /><br />
 
-            I enjoy solving real-world problems using data-driven
-            approaches and continuously improving my technical skills
-            by building practical projects and exploring modern AI technologies.
+            My journey into technology started with curiosity about
+            how intelligent systems work and how data can be used
+            to solve real-world problems.
+            Over time, I developed strong skills in Python programming,
+            data visualization, machine learning algorithms,
+            and project development.
+
             <br /><br />
 
-            My goal is to become a professional Data Scientist and contribute
-            to innovative AI-driven solutions.
+            I enjoy building practical projects that combine creativity,
+            problem-solving, and analytical thinking.
+            I continuously improve my skills by exploring new technologies,
+            practicing coding, and working on real-world datasets.
+
+            <br /><br />
+
+            My technical expertise includes Python,
+            Machine Learning, Pandas, NumPy,
+            Matplotlib, Scikit-learn, GitHub,
+            Next.js, and modern development tools.
+
+            <br /><br />
+
+            Apart from coding, I am passionate about learning
+            futuristic technologies, AI innovations,
+            and continuously growing as a developer and Data Scientist.
+
+            <br /><br />
+
+            My goal is to become a successful Data Scientist
+            and contribute to innovative AI-driven technologies
+            that create meaningful impact in the industry.
+
           </p>
-
-        </div>
-
-        <div className="glass rounded-3xl p-8 mb-10 card-hover">
-
-          <h2 className="text-3xl font-bold mb-5 text-blue-400">
-            Technical Skills
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6">
-
-            <ul className="text-gray-300 leading-9">
-              <li>• Python Programming</li>
-              <li>• Machine Learning</li>
-              <li>• Data Analysis</li>
-              <li>• Pandas & NumPy</li>
-              <li>• Matplotlib</li>
-            </ul>
-
-            <ul className="text-gray-300 leading-9">
-              <li>• Git & GitHub</li>
-              <li>• VS Code</li>
-              <li>• Jupyter Notebook</li>
-              <li>• Next.js & React</li>
-              <li>• HTML, CSS & JavaScript</li>
-            </ul>
-
-          </div>
 
         </div>
 
