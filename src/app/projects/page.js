@@ -21,26 +21,26 @@ export default function Projects() {
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Data analysis project using Python, Pandas,
-              NumPy, and Matplotlib for analyzing student performance.
+              Student performance analysis using Python,
+              Pandas, NumPy and Matplotlib.
             </p>
 
             <div className="flex gap-4">
 
               <a
-                href="https://github.com/yashshelke9129-droid/student-result-analysis"
+                href="https://github.com/yashshelke9129-droid/student-result-analysis/blob/main/Result.ipynb"
                 target="_blank"
                 className="bg-blue-500 px-4 py-2 rounded-lg"
               >
-                GitHub
+                View Project
               </a>
 
               <a
-                href="/projects/Result(2).ipynb"
-                download
-                className="bg-green-500 px-4 py-2 rounded-lg"
+                href="https://github.com/yashshelke9129-droid/student-result-analysis"
+                target="_blank"
+                className="bg-gray-700 px-4 py-2 rounded-lg"
               >
-                Download Code
+                GitHub Repo
               </a>
 
             </div>
@@ -62,19 +62,19 @@ export default function Projects() {
             <div className="flex gap-4">
 
               <a
-                href="https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification/blob/main/CodeAlpha_Iris_Flower_Classification.ipynb"
                 target="_blank"
                 className="bg-blue-500 px-4 py-2 rounded-lg"
               >
-                GitHub
+                View Project
               </a>
 
               <a
-                href="/projects/CodeAlpha_Iris_Flower_Classification.ipynb"
-                download
-                className="bg-green-500 px-4 py-2 rounded-lg"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
+                target="_blank"
+                className="bg-gray-700 px-4 py-2 rounded-lg"
               >
-                Download Code
+                GitHub Repo
               </a>
 
             </div>
@@ -96,19 +96,19 @@ export default function Projects() {
             <div className="flex gap-4">
 
               <a
-                href="https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction/blob/main/CodeAlpha_Car_Price_Prediction.ipynb"
                 target="_blank"
                 className="bg-blue-500 px-4 py-2 rounded-lg"
               >
-                GitHub
+                View Project
               </a>
 
               <a
-                href="/projects/CodeAlpha_Car_Price_Prediction.ipynb"
-                download
-                className="bg-green-500 px-4 py-2 rounded-lg"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
+                target="_blank"
+                className="bg-gray-700 px-4 py-2 rounded-lg"
               >
-                Download Code
+                GitHub Repo
               </a>
 
             </div>
@@ -123,26 +123,26 @@ export default function Projects() {
             </h2>
 
             <p className="text-gray-400 mb-5">
-              Sales forecasting project using
-              Machine Learning and predictive analytics.
+              Machine learning sales forecasting project
+              using predictive analytics.
             </p>
 
             <div className="flex gap-4">
 
               <a
-                href="https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction/blob/main/CodeAlpha_Sales_Prediction.ipynb"
                 target="_blank"
                 className="bg-blue-500 px-4 py-2 rounded-lg"
               >
-                GitHub
+                View Project
               </a>
 
               <a
-                href="/projects/CodeAlpha_Sales_Prediction.ipynb"
-                download
-                className="bg-green-500 px-4 py-2 rounded-lg"
+                href="https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
+                target="_blank"
+                className="bg-gray-700 px-4 py-2 rounded-lg"
               >
-                Download Code
+                GitHub Repo
               </a>
 
             </div>
