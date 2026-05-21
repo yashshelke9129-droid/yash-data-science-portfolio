@@ -3,16 +3,22 @@
 import Link from "next/link";
 
 export default function Navbar() {
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-lg border-b border-white/10">
 
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-5">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-cyan-500/20">
 
-        <h1 className="text-3xl font-bold gradient-text">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+        {/* Logo */}
+
+        <h1 className="text-4xl font-bold text-cyan-400">
           YS Portfolio
         </h1>
 
-        <div className="flex gap-8 text-lg">
+        {/* Navigation Links */}
+
+        <div className="flex gap-10 text-2xl font-medium text-white">
 
           <Link href="/" className="hover:text-cyan-400 transition">
             Home
@@ -30,6 +36,10 @@ export default function Navbar() {
             Resume
           </Link>
 
+          <Link href="/certificates" className="hover:text-cyan-400 transition">
+            Certificates
+          </Link>
+
           <Link href="/contact" className="hover:text-cyan-400 transition">
             Contact
           </Link>
@@ -39,5 +49,7 @@ export default function Navbar() {
       </div>
 
     </nav>
+
   );
+
 }
