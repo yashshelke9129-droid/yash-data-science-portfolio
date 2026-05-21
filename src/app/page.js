@@ -51,11 +51,12 @@ export default function Home() {
             transition={{ delay: 0.5 }}
             className="text-cyan-300 text-2xl mt-6 leading-10"
           >
-            Data Science Student | Machine Learning Enthusiast |
-            Python Developer | Future AI Engineer
+            TYBSc Computer Science Student |
+            Technology Enthusiast |
+            Future Tech Professional
           </motion.p>
 
-          {/* About */}
+          {/* About Section */}
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -70,21 +71,30 @@ export default function Home() {
 
             <p className="text-gray-300 text-lg leading-9">
 
-              I am currently pursuing TYBSc Computer Science and passionately
-              exploring the world of Data Science, Machine Learning,
-              Artificial Intelligence, and modern technologies.
+              I am currently pursuing TYBSc Computer Science with a strong
+              interest in modern technology and innovation. I always try
+              to improve my practical knowledge and explore different areas
+              of the technology world to enhance my learning experience.
 
               <br /><br />
 
-              I enjoy building real-world AI and Data Science projects
-              using Python, Pandas, NumPy, Scikit-learn, React.js,
-              and Next.js.
+              I enjoy working on creative ideas, discovering new concepts,
+              and continuously improving my abilities through projects and
+              self-learning. I believe consistency, curiosity, and dedication
+              are the key factors for growth in the technology field.
 
               <br /><br />
 
-              My goal is to become a highly skilled Data Scientist
-              and AI Engineer capable of building intelligent systems
-              that solve real-world problems.
+              My goal is to build a successful career where I can apply my
+              knowledge, improve my skills, and gain valuable real-world
+              experience while continuously growing as a professional.
+
+              <br /><br />
+
+              Apart from academics, I also focus on improving my communication,
+              confidence, creativity, and problem-solving abilities to become
+              a future-ready individual capable of adapting to new challenges
+              and opportunities.
 
             </p>
 

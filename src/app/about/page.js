@@ -1,122 +1,131 @@
 "use client";
 
 import Navbar from "../../components/Navbar";
+
 import { motion } from "framer-motion";
 
 export default function About() {
+
   return (
+
     <>
+
       <Navbar />
 
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen px-6 md:px-20 py-32 grid-bg text-white"
-      >
-
-        {/* Heading */}
-
-        <motion.h1
-          initial={{ y: -60, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl md:text-7xl font-bold gradient-text mb-16"
-        >
-          About Me
-        </motion.h1>
-
-        {/* Main Card */}
+      <main className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-black text-white px-6 py-20 flex items-center justify-center overflow-hidden">
 
         <motion.div
-          initial={{ y: 80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0, y: 80 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="glass glow rounded-3xl p-10 md:p-14 card-hover"
+          className="glass glow rounded-3xl p-10 md:p-16 max-w-6xl"
         >
 
-          <h2 className="text-4xl font-bold mb-8 text-cyan-400">
-            Hello, I'm Yash Shelke
-          </h2>
+          {/* Heading */}
 
-          <p className="text-gray-300 leading-10 text-lg">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-5xl md:text-6xl font-bold text-cyan-400 mb-10 text-center"
+          >
+            About Me
+          </motion.h1>
 
-            I am a passionate and highly motivated Data Science student currently pursuing
-            Third Year Bachelor of Science in Computer Science (TYBSc CS). I have a strong interest in
-            Artificial Intelligence, Machine Learning, Data Analytics, and modern software technologies.
-            My goal is to become a skilled Data Scientist capable of building innovative AI-driven solutions
-            that can solve real-world problems efficiently.
+          {/* About Text */}
 
-            <br /><br />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-gray-300 text-lg leading-10 space-y-8"
+          >
 
-            My journey into technology started with curiosity about how intelligent systems work and how
-            data can be transformed into meaningful insights. Over time, I developed strong interest in
-            Python programming, data visualization, machine learning algorithms, predictive analytics,
-            and software development. I continuously work on improving my technical and analytical skills
-            through practical implementation and real-world projects.
+            <p>
 
-            <br /><br />
+              Hello! I am Yash Shelke, currently pursuing TYBSc Computer
+              Science with a strong passion for technology, innovation,
+              and continuous learning. I enjoy exploring modern digital
+              trends and understanding how technology is transforming
+              industries and creating new opportunities around the world.
 
-            I enjoy working on projects related to Data Science and Machine Learning because they allow me
-            to combine logic, creativity, and problem-solving abilities. I have successfully developed
-            multiple projects such as Student Result Analysis, Iris Flower Classification,
-            Car Price Prediction, and Sales Prediction using Python, Pandas, NumPy, Matplotlib,
-            and Scikit-learn.
+            </p>
 
-            <br /><br />
+            <p>
 
-            Through these projects, I gained practical experience in data preprocessing,
-            exploratory data analysis, data visualization, model training,
-            prediction systems, and performance evaluation. I also learned how to work with
-            real-world datasets and transform raw data into valuable insights.
+              My academic journey has helped me develop interest in
+              various areas of Computer Science where I continuously
+              improve my practical knowledge, logical thinking, and
+              problem-solving abilities. I enjoy learning through
+              experimentation, projects, and real-world exposure that
+              helps me gain deeper understanding of different concepts.
 
-            <br /><br />
+            </p>
 
-            Apart from Data Science, I also have knowledge of modern web technologies such as
-            HTML, CSS, JavaScript, React.js, Next.js, and GitHub. I enjoy creating modern,
-            responsive, and professional websites that combine functionality with attractive design.
+            <p>
 
-            <br /><br />
+              I always try to stay curious and motivated while learning
+              new things. Exploring modern tools, understanding how
+              applications are built, and improving my technical skills
+              gives me confidence to grow professionally and personally.
+              I strongly believe that consistency and dedication are
+              important qualities for success in the technology field.
 
-            I strongly believe in continuous learning and self-improvement.
-            I regularly explore new technologies, AI tools, and industry trends to expand my knowledge
-            and stay updated with the rapidly evolving technology world.
+            </p>
 
-          </p>
+            <p>
+
+              Apart from technical learning, I also focus on improving
+              my communication, creativity, leadership qualities, and
+              confidence. I believe personal growth is equally important
+              along with technical growth because it helps in becoming
+              a complete and future-ready professional.
+
+            </p>
+
+            <p>
+
+              My goal is to build a successful career where I can apply
+              my knowledge, continue learning advanced technologies,
+              work on innovative ideas, and gain valuable industry
+              experience. I am always eager to take on new challenges,
+              improve my abilities, and grow step-by-step in my journey
+              towards becoming a skilled technology professional.
+
+            </p>
+
+          </motion.div>
 
           {/* Skills Section */}
 
-          <div className="mt-14">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="mt-14"
+          >
 
-            <h2 className="text-4xl font-bold text-cyan-400 mb-8">
-              Technical Skills
+            <h2 className="text-4xl font-bold text-cyan-400 mb-8 text-center">
+              Skills & Interests
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
 
-              <div className="glass rounded-2xl p-6 card-hover glow">
+              {/* Technical Skills */}
 
-                <ul className="space-y-4 text-lg text-gray-300">
+              <div className="glass rounded-2xl p-8 glow">
 
-                  <li>• Python Programming</li>
+                <h3 className="text-2xl font-bold text-cyan-300 mb-6">
+                  Technical Skills
+                </h3>
 
-                  <li>• Machine Learning</li>
+                <ul className="text-gray-300 text-lg space-y-4">
 
-                  <li>• Data Analysis</li>
+                  <li>• Programming Fundamentals</li>
 
-                  <li>• Pandas & NumPy</li>
+                  <li>• Problem Solving</li>
 
-                  <li>• Data Visualization</li>
-
-                </ul>
-
-              </div>
-
-              <div className="glass rounded-2xl p-6 card-hover glow">
-
-                <ul className="space-y-4 text-lg text-gray-300">
-
-                  <li>• Scikit-learn</li>
+                  <li>• Basic Web Development</li>
 
                   <li>• HTML, CSS & JavaScript</li>
 
@@ -124,7 +133,47 @@ export default function About() {
 
                   <li>• Git & GitHub</li>
 
-                  <li>• Problem Solving</li>
+                  <li>• Technology Research</li>
+
+                  <li>• Project Development</li>
+
+                  <li>• Computer Fundamentals</li>
+
+                  <li>• Learning Modern Technologies</li>
+
+                </ul>
+
+              </div>
+
+              {/* Professional Skills */}
+
+              <div className="glass rounded-2xl p-8 glow">
+
+                <h3 className="text-2xl font-bold text-cyan-300 mb-6">
+                  Professional Skills
+                </h3>
+
+                <ul className="text-gray-300 text-lg space-y-4">
+
+                  <li>• Communication Skills</li>
+
+                  <li>• Leadership Qualities</li>
+
+                  <li>• Creative Thinking</li>
+
+                  <li>• Team Collaboration</li>
+
+                  <li>• Time Management</li>
+
+                  <li>• Continuous Learning</li>
+
+                  <li>• Adaptability</li>
+
+                  <li>• Self Motivation</li>
+
+                  <li>• Presentation Skills</li>
+
+                  <li>• Professional Growth Mindset</li>
 
                 </ul>
 
@@ -132,35 +181,14 @@ export default function About() {
 
             </div>
 
-          </div>
-
-          {/* Career Goal */}
-
-          <div className="mt-14 glass rounded-2xl p-8 card-hover glow">
-
-            <h2 className="text-4xl font-bold text-cyan-400 mb-6">
-              Career Objective
-            </h2>
-
-            <p className="text-gray-300 text-lg leading-10">
-
-              My long-term objective is to establish myself as a successful
-              Data Scientist and AI Engineer who contributes to impactful and futuristic technologies.
-              I am highly passionate about creating intelligent systems that can improve efficiency,
-              automate processes, and provide meaningful solutions to complex problems.
-
-              <br /><br />
-
-              I am always eager to learn, grow, and take on new challenges that help me expand my
-              technical expertise and professional experience in the field of Data Science and Technology.
-
-            </p>
-
-          </div>
+          </motion.div>
 
         </motion.div>
 
-      </motion.main>
+      </main>
+
     </>
+
   );
+
 }
