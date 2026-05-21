@@ -1,7 +1,6 @@
 "use client";
 
 import Navbar from "../components/Navbar";
-
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -12,13 +11,20 @@ export default function Home() {
 
       <Navbar />
 
-      <main className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-black via-blue-950 to-black text-white overflow-hidden">
+      <main className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-black via-blue-950 to-black text-white overflow-hidden relative">
+
+        {/* Animated Background Glow */}
+
+        <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full animate-pulse"></div>
+
+        <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full animate-pulse"></div>
 
         <motion.div
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="glass glow rounded-3xl p-10 md:p-16 text-center max-w-5xl"
+          whileHover={{ scale: 1.02 }}
+          className="glass glow rounded-3xl p-10 md:p-16 text-center max-w-5xl relative z-10 transition-all duration-500"
         >
 
           {/* Profile Image */}
@@ -26,19 +32,23 @@ export default function Home() {
           <motion.img
             src="/profile.jpeg"
             alt="Yash Shelke"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 0, rotate: -10 }}
+            animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 1 }}
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0px 0px 40px rgba(34,211,238,0.8)"
+            }}
             className="w-52 h-52 rounded-full mx-auto border-4 border-cyan-400 shadow-2xl shadow-cyan-500/50 object-cover"
           />
 
           {/* Name */}
 
           <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-6xl md:text-7xl font-bold mt-8"
+            className="text-6xl md:text-7xl font-bold mt-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
           >
             Yash Shelke
           </motion.h1>
@@ -59,10 +69,14 @@ export default function Home() {
           {/* About Section */}
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
-            className="mt-10 glass rounded-2xl p-8"
+            whileHover={{
+              y: -5,
+              boxShadow: "0px 0px 40px rgba(34,211,238,0.2)"
+            }}
+            className="mt-10 glass rounded-2xl p-8 transition-all duration-500"
           >
 
             <h2 className="text-3xl font-bold text-cyan-400 mb-6">
