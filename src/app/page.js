@@ -1,7 +1,11 @@
 "use client";
 
 import Navbar from "../components/Navbar";
+import ParticlesBackground from "../components/ParticlesBackground";
+
 import { motion } from "framer-motion";
+
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
 
@@ -11,110 +15,163 @@ export default function Home() {
 
       <Navbar />
 
+      <ParticlesBackground />
+
       <main className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-br from-black via-blue-950 to-black text-white overflow-hidden relative">
 
-        {/* Animated Background Glow */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center max-w-7xl w-full relative z-10">
 
-        <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-cyan-500/20 blur-[120px] rounded-full animate-pulse"></div>
-
-        <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-blue-500/20 blur-[120px] rounded-full animate-pulse"></div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          whileHover={{ scale: 1.02 }}
-          className="glass glow rounded-3xl p-10 md:p-16 text-center max-w-5xl relative z-10 transition-all duration-500"
-        >
-
-          {/* Profile Image */}
-
-          <motion.img
-            src="/profile.jpeg"
-            alt="Yash Shelke"
-            initial={{ scale: 0, rotate: -10 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 1 }}
-            whileHover={{
-              scale: 1.08,
-              boxShadow: "0px 0px 40px rgba(34,211,238,0.8)"
-            }}
-            className="w-52 h-52 rounded-full mx-auto border-4 border-cyan-400 shadow-2xl shadow-cyan-500/50 object-cover"
-          />
-
-          {/* Name */}
-
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-6xl md:text-7xl font-bold mt-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-          >
-            Yash Shelke
-          </motion.h1>
-
-          {/* Role */}
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-cyan-300 text-2xl mt-6 leading-10"
-          >
-            TYBSc Computer Science Student |
-            Technology Enthusiast |
-            Future Tech Professional
-          </motion.p>
-
-          {/* About Section */}
+          {/* LEFT */}
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0px 0px 40px rgba(34,211,238,0.2)"
-            }}
-            className="mt-10 glass rounded-2xl p-8 transition-all duration-500"
+            initial={{ opacity: 0, x: -80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
           >
 
-            <h2 className="text-3xl font-bold text-cyan-400 mb-6">
-              About Me
-            </h2>
+            <p className="text-cyan-400 text-xl mb-5 tracking-[5px] uppercase">
+              Data Science Portfolio
+            </p>
 
-            <p className="text-gray-300 text-lg leading-9">
+            <h1 className="text-7xl md:text-8xl font-black leading-tight mb-8">
 
-              I am currently pursuing TYBSc Computer Science with a strong
-              interest in modern technology and innovation. I always try
-              to improve my practical knowledge and explore different areas
-              of the technology world to enhance my learning experience.
+              <span className="gradient-text">
+                Yash
+              </span>
 
-              <br /><br />
+              <br />
 
-              I enjoy working on creative ideas, discovering new concepts,
-              and continuously improving my abilities through projects and
-              self-learning. I believe consistency, curiosity, and dedication
-              are the key factors for growth in the technology field.
+              Shelke
 
-              <br /><br />
+            </h1>
 
-              My goal is to build a successful career where I can apply my
-              knowledge, improve my skills, and gain valuable real-world
-              experience while continuously growing as a professional.
+            <TypeAnimation
+              sequence={[
 
-              <br /><br />
+                "Aspiring Data Scientist",
 
-              Apart from academics, I also focus on improving my communication,
-              confidence, creativity, and problem-solving abilities to become
-              a future-ready individual capable of adapting to new challenges
-              and opportunities.
+                2000,
+
+                "Machine Learning Enthusiast",
+
+                2000,
+
+                "Modern Web Developer",
+
+                2000
+
+              ]}
+              wrapper="p"
+              speed={50}
+              repeat={Infinity}
+              className="text-cyan-300 text-3xl mb-10"
+            />
+
+            <p className="text-gray-300 text-xl leading-10 max-w-2xl">
+
+              Passionate about Machine Learning,
+              Data Analytics, Artificial Intelligence,
+              and building futuristic digital experiences.
 
             </p>
 
+            {/* Skills */}
+
+            <div className="flex flex-wrap gap-4 mt-10">
+
+              <span className="glass px-5 py-3 rounded-full text-cyan-300">
+                Python
+              </span>
+
+              <span className="glass px-5 py-3 rounded-full text-cyan-300">
+                Machine Learning
+              </span>
+
+              <span className="glass px-5 py-3 rounded-full text-cyan-300">
+                Data Science
+              </span>
+
+              <span className="glass px-5 py-3 rounded-full text-cyan-300">
+                React
+              </span>
+
+              <span className="glass px-5 py-3 rounded-full text-cyan-300">
+                Next.js
+              </span>
+
+            </div>
+
+            {/* Stats */}
+
+            <div className="grid grid-cols-3 gap-6 mt-14">
+
+              <div className="glass rounded-3xl p-6 text-center card-hover">
+
+                <h2 className="text-4xl font-bold text-cyan-400">
+                  4+
+                </h2>
+
+                <p className="text-gray-400 mt-2">
+                  Projects
+                </p>
+
+              </div>
+
+              <div className="glass rounded-3xl p-6 text-center card-hover">
+
+                <h2 className="text-4xl font-bold text-cyan-400">
+                  2+
+                </h2>
+
+                <p className="text-gray-400 mt-2">
+                  Certificates
+                </p>
+
+              </div>
+
+              <div className="glass rounded-3xl p-6 text-center card-hover">
+
+                <h2 className="text-4xl font-bold text-cyan-400">
+                  1+
+                </h2>
+
+                <p className="text-gray-400 mt-2">
+                  Internship
+                </p>
+
+              </div>
+
+            </div>
+
           </motion.div>
 
-        </motion.div>
+          {/* RIGHT */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="relative flex justify-center"
+          >
+
+            <div className="absolute w-[450px] h-[450px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
+
+            <motion.img
+              src="/profile.jpeg"
+              alt="Yash Shelke"
+              animate={{
+                y: [0, -20, 0]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity
+              }}
+              className="relative z-10 w-[380px] h-[380px] object-cover rounded-[40px] border border-cyan-400/30 shadow-[0_0_60px_rgba(34,211,238,0.3)]"
+            />
+
+          </motion.div>
+
+        </div>
 
       </main>
 
