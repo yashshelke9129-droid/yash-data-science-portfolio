@@ -8,38 +8,57 @@ export default function ParticlesBackground() {
 
     <Particles
       className="absolute inset-0 -z-10"
+
       options={{
 
         background: {
           color: "transparent"
         },
 
+        fpsLimit: 120,
+
         particles: {
-
-          number: {
-            value: 50
-          },
-
-          size: {
-            value: 2
-          },
-
-          move: {
-            speed: 1
-          },
-
-          opacity: {
-            value: 0.3
-          },
 
           color: {
             value: "#22d3ee"
           },
 
           links: {
-            enable: true,
             color: "#22d3ee",
-            opacity: 0.2
+            distance: 150,
+            enable: true,
+            opacity: 0.2,
+            width: 1
+          },
+
+          move: {
+            direction: "none",
+            enable: true,
+            outModes: {
+              default: "bounce"
+            },
+            random: false,
+            speed: 1,
+            straight: false
+          },
+
+          number: {
+            density: {
+              enable: true
+            },
+            value: 50
+          },
+
+          opacity: {
+            value: 0.3
+          },
+
+          shape: {
+            type: "circle"
+          },
+
+          size: {
+            value: { min: 1, max: 3 }
           }
 
         }

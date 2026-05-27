@@ -1,287 +1,94 @@
 @import "tailwindcss";
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  margin:0;
-  padding:0;
-  background:#020617;
-  color:white;
-  overflow-x:hidden;
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  background: #020208;
+  color: #f8fafc;
+  overflow-x: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Animated Background */
+/* ==========================================================================
+   🌌 Premium Cyber Glassmorphism & Background Layers
+   ========================================================================== */
 
-body::before{
-
-  content:"";
-
-  position:fixed;
-
-  width:200%;
-  height:200%;
-
-  background:
-    radial-gradient(circle at top left, rgba(59,130,246,0.2), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(139,92,246,0.2), transparent 30%),
-    radial-gradient(circle at center, rgba(6,182,212,0.15), transparent 25%);
-
-  animation:moveBg 15s linear infinite;
-
-  z-index:-1;
-
+/* Cyber Matrix Mesh Background Fixed Vector */
+.mesh-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 1) 0%, rgba(2, 2, 8, 1) 100%);
+  z-index: -2;
 }
 
-@keyframes moveBg{
-
-  0%{
-    transform:translate(0,0);
-  }
-
-  50%{
-    transform:translate(-5%,-5%);
-  }
-
-  100%{
-    transform:translate(0,0);
-  }
-
+/* Cyber Terminal Coordinate Alignment Grid */
+.matrix-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
-/* Grid */
-
-.grid-bg{
-
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-
-  background-size:40px 40px;
-
+/* High-Tier Glassmorphic Panels Framework */
+.premium-glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
 }
 
-/* Glassmorphism */
+/* ==========================================================================
+   ⚡ Dynamic Motion Engine & Interactivity
+   ========================================================================== */
 
-.glass{
-
-  background:rgba(255,255,255,0.05);
-
-  backdrop-filter:blur(18px);
-
-  border:1px solid rgba(255,255,255,0.08);
-
+/* Hover-activated Cyan Gradient Boundaries */
+.glow-card {
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Premium Gradient Text */
-
-.gradient-text{
-
-  background:linear-gradient(
-    to right,
-    #22d3ee,
-    #3b82f6,
-    #8b5cf6
-  );
-
-  background-clip:text;
-
-  -webkit-background-clip:text;
-
-  -webkit-text-fill-color:transparent;
-
+.glow-card:hover {
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  box-shadow: 
+    0 0 30px rgba(6, 182, 212, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Glow */
-
-.glow{
-
-  box-shadow:
-    0 0 20px rgba(59,130,246,0.4),
-    0 0 40px rgba(139,92,246,0.2);
-
+/* Real-time Text Flow Gradient Keyframes Engine */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Premium Hover Cards */
-
-.card-hover{
-
-  transition:0.3s ease-in-out;
-
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
 }
 
-.card-hover:hover{
+/* ==========================================================================
+   🎛️ Custom Structural Scroll Tracker
+   ========================================================================== */
 
-  transform:translateY(-12px) scale(1.02);
-
-  box-shadow:
-    0 0 25px rgba(59,130,246,0.5),
-    0 0 45px rgba(139,92,246,0.3);
-
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Premium Button Glow */
-
-.btn-hover{
-
-  transition:all 0.18s ease-in-out;
-
-  position:relative;
-
-  overflow:hidden;
-
-  cursor:pointer;
-
+::-webkit-scrollbar-track {
+  background: #020208;
 }
 
-.btn-hover:hover{
-
-  transform:translateY(-4px) scale(1.08);
-
-  box-shadow:
-    0 0 15px rgba(34,211,238,0.8),
-    0 0 35px rgba(139,92,246,0.5);
-
-}
-
-/* Shine Animation */
-
-.btn-hover::before{
-
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:-120%;
-
-  width:100%;
-  height:100%;
-
-  background:rgba(255,255,255,0.2);
-
-  transform:skewX(-20deg);
-
-  transition:0.3s;
-
-}
-
-.btn-hover:hover::before{
-
-  left:120%;
-
-}
-
-/* Floating Animation */
-
-@keyframes floating{
-
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-12px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
-
-}
-
-.float-animation{
-
-  animation:floating 4s ease-in-out infinite;
-
-}
-
-/* Fade Animation */
-
-@keyframes fadeIn{
-
-  from{
-
-    opacity:0;
-
-    transform:translateY(30px);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-  }
-
-}
-
-.fade-in{
-
-  animation:fadeIn 1s ease;
-
-}
-
-/* Premium Blur */
-
-.premium-blur{
-
-  backdrop-filter:blur(20px);
-
-}
-
-/* Floating Card */
-
-.float-card{
-
-  animation:floating 5s ease-in-out infinite;
-
-}
-
-/* Scrollbar */
-
-::-webkit-scrollbar{
-
-  width:8px;
-
-}
-
-::-webkit-scrollbar-track{
-
-  background:#020617;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-  background:linear-gradient(#06b6d4,#8b5cf6);
-
-  border-radius:20px;
-
-}
-
-/* Navbar */
-
-nav{
-
-  background:rgba(2,6,23,0.55);
-
-  backdrop-filter:blur(18px);
-
-  border-bottom:1px solid rgba(255,255,255,0.08);
-
-}
-
-/* Selection */
-
-::selection{
-
-  background:#06b6d4;
-
-  color:black;
-
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #06b6d4, #8b5cf6);
+  border-radius: 10px;
 }

@@ -1,194 +1,69 @@
 "use client";
 
-import Navbar from "../../components/Navbar";
-
 import { motion } from "framer-motion";
 
-export default function About() {
-
+export default function AboutSection() {
   return (
-
-    <>
-
-      <Navbar />
-
-      <main className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-black text-white px-6 py-20 flex items-center justify-center overflow-hidden">
-
-        <motion.div
-          initial={{ opacity: 0, y: 80 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="glass glow rounded-3xl p-10 md:p-16 max-w-6xl"
-        >
-
-          {/* Heading */}
-
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold text-cyan-400 mb-10 text-center"
-          >
-            About Me
-          </motion.h1>
-
-          {/* About Text */}
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-gray-300 text-lg leading-10 space-y-8"
-          >
-
-            <p>
-
-              Hello! I am Yash Shelke, currently pursuing TYBSc Computer
-              Science with a strong passion for technology, innovation,
-              and continuous learning. I enjoy exploring modern digital
-              trends and understanding how technology is transforming
-              industries and creating new opportunities around the world.
-
-            </p>
-
-            <p>
-
-              My academic journey has helped me develop interest in
-              various areas of Computer Science where I continuously
-              improve my practical knowledge, logical thinking, and
-              problem-solving abilities. I enjoy learning through
-              experimentation, projects, and real-world exposure that
-              helps me gain deeper understanding of different concepts.
-
-            </p>
-
-            <p>
-
-              I always try to stay curious and motivated while learning
-              new things. Exploring modern tools, understanding how
-              applications are built, and improving my technical skills
-              gives me confidence to grow professionally and personally.
-              I strongly believe that consistency and dedication are
-              important qualities for success in the technology field.
-
-            </p>
-
-            <p>
-
-              Apart from technical learning, I also focus on improving
-              my communication, creativity, leadership qualities, and
-              confidence. I believe personal growth is equally important
-              along with technical growth because it helps in becoming
-              a complete and future-ready professional.
-
-            </p>
-
-            <p>
-
-              My goal is to build a successful career where I can apply
-              my knowledge, continue learning advanced technologies,
-              work on innovative ideas, and gain valuable industry
-              experience. I am always eager to take on new challenges,
-              improve my abilities, and grow step-by-step in my journey
-              towards becoming a skilled technology professional.
-
-            </p>
-
-          </motion.div>
-
-          {/* Skills Section */}
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-14"
-          >
-
-            <h2 className="text-4xl font-bold text-cyan-400 mb-8 text-center">
-              Skills & Interests
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-
-              {/* Technical Skills */}
-
-              <div className="glass rounded-2xl p-8 glow">
-
-                <h3 className="text-2xl font-bold text-cyan-300 mb-6">
-                  Technical Skills
-                </h3>
-
-                <ul className="text-gray-300 text-lg space-y-4">
-
-                  <li>• Programming Fundamentals</li>
-
-                  <li>• Problem Solving</li>
-
-                  <li>• Basic Web Development</li>
-
-                  <li>• HTML, CSS & JavaScript</li>
-
-                  <li>• React.js & Next.js</li>
-
-                  <li>• Git & GitHub</li>
-
-                  <li>• Technology Research</li>
-
-                  <li>• Project Development</li>
-
-                  <li>• Computer Fundamentals</li>
-
-                  <li>• Learning Modern Technologies</li>
-
-                </ul>
-
-              </div>
-
-              {/* Professional Skills */}
-
-              <div className="glass rounded-2xl p-8 glow">
-
-                <h3 className="text-2xl font-bold text-cyan-300 mb-6">
-                  Professional Skills
-                </h3>
-
-                <ul className="text-gray-300 text-lg space-y-4">
-
-                  <li>• Communication Skills</li>
-
-                  <li>• Leadership Qualities</li>
-
-                  <li>• Creative Thinking</li>
-
-                  <li>• Team Collaboration</li>
-
-                  <li>• Time Management</li>
-
-                  <li>• Continuous Learning</li>
-
-                  <li>• Adaptability</li>
-
-                  <li>• Self Motivation</li>
-
-                  <li>• Presentation Skills</li>
-
-                  <li>• Professional Growth Mindset</li>
-
-                </ul>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
+    <section id="about" className="w-full py-24 px-6 bg-[#020617] text-slate-300">
+      <div className="max-w-6xl mx-auto space-y-24">
+        
+        {/* Header - The Identity */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="text-center">
+          <p className="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-4">// System Identification</p>
+          <h1 className="text-6xl md:text-8xl font-black text-white mb-6">YASH SHELKE</h1>
+          <p className="text-xl md:text-2xl text-slate-500 font-light max-w-2xl mx-auto">
+            Innovator | Data Science & Analytics Enthusiast | Computer Science Scholar
+          </p>
         </motion.div>
 
-      </main>
+        {/* The Narrative - Deep Dive */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} className="space-y-8">
+            <h2 className="text-3xl font-bold text-white">// Core Analytical Thesis</h2>
+            <div className="space-y-6 text-slate-400 leading-relaxed text-lg">
+              <p>
+                Currently pursuing my <strong>TYBSc in Computer Science</strong>, I have dedicated my academic journey to mastering the complexities of technology and the art of innovation. My fascination lies in the raw power of data and how, when meticulously analyzed, it serves as the foundation for global industrial transformation.
+              </p>
+              <p>
+                I don't just write code; I construct logic. My approach to Data Science is iterative—ingesting raw datasets, applying rigorous statistical frameworks, and extracting insights that drive meaningful business decisions. My goal is to bridge the chasm between academic research and industrial-grade applications.
+              </p>
+            </div>
+          </motion.div>
 
-    </>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} className="bg-slate-900/30 p-8 rounded-3xl border border-slate-800">
+            <h2 className="text-3xl font-bold text-white mb-8">// Professional DNA</h2>
+            <div className="space-y-6">
+              {[
+                { title: "Continuous Learning", desc: "Always exploring emerging trends in Machine Learning and Web architecture." },
+                { title: "Practical Exposure", desc: "Focus on real-world project deployment over passive theoretical study." },
+                { title: "Growth Mindset", desc: "Embracing challenges as opportunities to iterate, fail, and evolve stronger." }
+              ].map((point, i) => (
+                <div key={i} className="border-l-2 border-cyan-500 pl-4">
+                  <h4 className="text-white font-bold">{point.title}</h4>
+                  <p className="text-sm text-slate-400">{point.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
 
+        {/* Skill Matrix */}
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="grid md:grid-cols-3 gap-8">
+          {[
+            { cat: "TECHNICAL CORE", color: "text-cyan-400", list: ["Python", "SQL", "Next.js", "React.js", "Data Wrangling", "Statistical Analysis"] },
+            { cat: "ANALYTICS & ML", color: "text-blue-400", list: ["EDA", "Scikit-Learn", "Model Training", "Data Visualization", "Predictive Modeling"] },
+            { cat: "PROFESSIONAL", color: "text-purple-400", list: ["Leadership", "Team Collaboration", "Agile Workflow", "Presentation Skills", "Strategic Planning"] }
+          ].map((block, i) => (
+            <div key={i} className="p-8 bg-slate-950 border border-slate-800 rounded-3xl">
+              <h3 className={`${block.color} font-mono font-bold text-xs tracking-widest mb-6`}>// {block.cat}</h3>
+              <ul className="space-y-4">
+                {block.list.map(item => <li key={item} className="text-slate-300 flex items-center gap-3"> <span className="text-slate-600">»</span> {item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </motion.div>
+
+      </div>
+    </section>
   );
-
 }

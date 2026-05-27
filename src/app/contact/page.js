@@ -1,99 +1,73 @@
 "use client";
 
-import Navbar from "../../components/Navbar";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-export default function Contact() {
+export default function ContactSection() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ENDPOINT", { // ⬅️ Yahan apna endpoint daalo
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        setStatus("SUCCESS: PAYLOAD TRANSMITTED!");
+        form.reset();
+      } else {
+        setStatus("ERROR: TRANSMISSION FAILED.");
+      }
+    } catch (error) {
+      setStatus("ERROR: NETWORK FAILURE.");
+    }
+  };
+
   return (
-    <>
-      <Navbar />
-
-      <motion.main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="min-h-screen px-6 md:px-20 py-32 grid-bg text-white"
-      >
-
-        <motion.h1
-          initial={{ y: -60, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl md:text-7xl font-bold gradient-text mb-16"
-        >
-          Contact Me
-        </motion.h1>
-
-        <motion.div
-          initial={{ y: 80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="glass glow rounded-3xl p-10 max-w-4xl card-hover"
-        >
-
-          <div className="space-y-10 text-xl">
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-            >
-              <h2 className="text-cyan-400 font-bold mb-3">
-                Email
-              </h2>
-
-              <p className="text-gray-300">
-                yashshelke9129@gmail.com
-              </p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-            >
-              <h2 className="text-cyan-400 font-bold mb-3">
-                Phone
-              </h2>
-
-              <p className="text-gray-300">
-                +91 9136486029
-              </p>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-            >
-              <h2 className="text-cyan-400 font-bold mb-3">
-                LinkedIn
-              </h2>
-
-              <a
-                href="https://www.linkedin.com/in/yash-shelke-69b397327"
-                target="_blank"
-                className="text-blue-400 hover:text-cyan-300 transition"
-              >
-                View LinkedIn Profile
-              </a>
-            </motion.div>
-
-            <motion.div
-              whileHover={{ scale: 1.03 }}
-            >
-              <h2 className="text-cyan-400 font-bold mb-3">
-                GitHub
-              </h2>
-
-              <a
-                href="https://github.com/yashshelke9129-droid"
-                target="_blank"
-                className="text-blue-400 hover:text-cyan-300 transition"
-              >
-                View GitHub Profile
-              </a>
-            </motion.div>
-
+    <section id="contact" className="w-full py-24 px-6 bg-[#020617] text-slate-300">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12">
+        
+        {/* Left: Nodes */}
+        <div className="lg:col-span-5 space-y-8">
+          <h2 className="text-4xl font-black text-white">// Connect Matrix</h2>
+          <div className="space-y-4">
+            {[
+              { label: "Phone", val: "+91 91364 86029" },
+              { label: "Email", val: "yashshelke9129@gmail.com" },
+              { label: "LinkedIn", val: "yash-shelke-69b397327" },
+              { label: "GitHub", val: "yashshelke9129-droid" },
+            ].map((item, i) => (
+              <div key={i} className="p-4 rounded-xl border border-slate-800 bg-slate-900/50">
+                <span className="text-[10px] uppercase text-slate-500">{item.label}</span>
+                <p className="text-white font-mono">{item.val}</p>
+              </div>
+            ))}
           </div>
+        </div>
 
-        </motion.div>
-
-      </motion.main>
-    </>
+        {/* Right: Form */}
+        <div className="lg:col-span-7 bg-slate-900/30 p-8 rounded-3xl border border-slate-800">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <input name="name" placeholder="User Identity" className="w-full bg-slate-950 p-4 rounded-xl border border-slate-700 outline-none focus:border-cyan-500" required />
+              <input name="email" type="email" placeholder="Return Mail" className="w-full bg-slate-950 p-4 rounded-xl border border-slate-700 outline-none focus:border-cyan-500" required />
+            </div>
+            <input name="subject" placeholder="Subject Parameter" className="w-full bg-slate-950 p-4 rounded-xl border border-slate-700 outline-none focus:border-cyan-500" required />
+            <textarea name="message" rows="5" placeholder="Payload Specifications..." className="w-full bg-slate-950 p-4 rounded-xl border border-slate-700 outline-none focus:border-cyan-500" required />
+            
+            <button type="submit" className="w-full py-4 rounded-xl font-bold uppercase bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+              Transmit Secure Payload
+            </button>
+            {status && <p className="text-center text-cyan-400">{status}</p>}
+          </form>
+        </div>
+      </div>
+    </section>
   );
 }
