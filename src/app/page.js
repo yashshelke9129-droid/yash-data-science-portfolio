@@ -98,10 +98,10 @@ export default function Home() {
               <p className="text-slate-400 text-sm">K. V. Pendharkar College, Dombivli</p>
               <div className="flex justify-between items-center mt-4 pt-4 border-t border-slate-800">
                 <span className="text-cyan-400 font-mono text-xs">Expected: May 2027</span>
-                <span className="bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded text-[10px] font-bold">9+ CGPA</span>
+                <span className="bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded text-[10px] font-bold">8.5+ CGPA</span>
               </div>
               <p className="text-slate-500 text-xs mt-3 leading-relaxed">
-                Currently advancing through the Third Year (TY) B.Sc. CS curriculum, specializing in Semesters 5 & 6. My core focus resides at the intersection of Data Engineering and Artificial Intelligence—specifically optimizing DBMS architectures, developing scalable Java backend logic, and implementing algorithmic models to extract actionable predictive insights.
+               Currently advancing through the Third Year (TY) B.Sc. CS curriculum, specializing in Data Science and Advanced Analytics. My core focus resides at the intersection of Predictive Modeling and Statistical Learning—specifically architecting scalable data pipelines, optimizing complex SQL/NoSQL structures, and developing robust Python-based algorithmic models to extract high-fidelity, actionable insights from raw, unstructured data.
               </p>
             </motion.div>
           </div>
