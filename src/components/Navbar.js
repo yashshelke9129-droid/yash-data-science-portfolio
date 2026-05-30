@@ -20,60 +20,85 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#020208]/70 backdrop-blur-xl border-b border-cyan-500/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Dynamic Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent tracking-wider">
+
+        <Link href="/" className="group flex items-center gap-3">
+          <span className="text-2xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent tracking-wider">
             YS.DATA
           </span>
+
           <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping"></span>
         </Link>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => {
             const isActive = pathname === link.href;
+
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-all duration-300 relative py-1 ${
-                  isActive ? "text-cyan-400 font-semibold" : "text-slate-400 hover:text-white"
+                className={`relative py-2 text-sm font-medium tracking-wide transition-all duration-500 hover:text-white hover:-translate-y-1 hover:scale-110 ${
+                  isActive
+                    ? "text-cyan-300 drop-shadow-[0_0_15px_rgba(34,211,238,1)]"
+                    : "text-slate-400"
                 }`}
               >
                 {link.name}
+
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full"></span>
+                  <>
+                    <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full shadow-[0_0_20px_#22d3ee]"></span>
+
+                    <span className="absolute inset-0 rounded-lg bg-cyan-500/5 blur-md"></span>
+                  </>
                 )}
               </Link>
             );
           })}
         </div>
 
-        {/* Mobile Hamburger Trigger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-slate-400 hover:text-white focus:outline-none transition-colors"
+          className="md:hidden text-slate-400 hover:text-white transition-all duration-300"
           aria-label="Toggle Navigation Menu"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             {isOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             )}
           </svg>
         </button>
       </div>
 
-      {/* Mobile Stack Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-[#020208]/95 backdrop-blur-2xl border-b border-cyan-500/10 px-6 py-6 absolute w-full left-0 flex flex-col gap-4 text-center transition-all">
+        <div className="md:hidden bg-[#020208]/95 backdrop-blur-2xl border-b border-cyan-500/10 px-6 py-6 absolute w-full left-0 flex flex-col gap-4 text-center">
           {links.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-lg py-2 block ${pathname === link.href ? "text-cyan-400 font-bold" : "text-slate-300"}`}
+              className={`text-lg py-2 transition-all duration-300 ${
+                pathname === link.href
+                  ? "text-cyan-400 font-bold drop-shadow-[0_0_20px_rgba(34,211,238,1)]"
+                  : "text-slate-300 hover:text-white"
+              }`}
             >
               {link.name}
             </Link>

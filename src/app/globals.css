@@ -1,94 +1,226 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
+
+* {
+  box-sizing: border-box;
+  }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #020208;
-  color: #f8fafc;
-  overflow-x: hidden;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: #020208;
+color: #f8fafc;
+overflow-x: hidden;
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ==========================================================================
-   🌌 Premium Cyber Glassmorphism & Background Layers
-   ========================================================================== */
+🌌 PREMIUM BACKGROUND SYSTEM
+========================================================================== */
 
-/* Cyber Matrix Mesh Background Fixed Vector */
 .mesh-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 1) 0%, rgba(2, 2, 8, 1) 100%);
-  z-index: -2;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background:
+radial-gradient(circle at 10% 20%, rgba(6,182,212,.15) 0%, transparent 40%),
+radial-gradient(circle at 90% 80%, rgba(139,92,246,.15) 0%, transparent 40%),
+radial-gradient(circle at 50% 50%, #020617 0%, #020208 100%);
+z-index: -2;
+animation: meshPulse 10s ease-in-out infinite;
 }
 
-/* Cyber Terminal Coordinate Alignment Grid */
+@keyframes meshPulse {
+0% {
+filter: brightness(1);
+}
+
+50% {
+filter: brightness(1.15);
+}
+
+100% {
+filter: brightness(1);
+}
+}
+
 .matrix-grid {
-  background-image: 
-    linear-gradient(rgba(6, 182, 212, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.02) 1px, transparent 1px);
-  background-size: 50px 50px;
-}
-
-/* High-Tier Glassmorphic Panels Framework */
-.premium-glass {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(6, 182, 212, 0.15);
+background-image:
+linear-gradient(rgba(6,182,212,.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(6,182,212,.03) 1px, transparent 1px);
+background-size: 50px 50px;
 }
 
 /* ==========================================================================
-   ⚡ Dynamic Motion Engine & Interactivity
-   ========================================================================== */
+💎 GLASSMORPHISM
+========================================================================== */
 
-/* Hover-activated Cyan Gradient Boundaries */
+.premium-glass {
+background: rgba(255,255,255,.03);
+backdrop-filter: blur(18px);
+-webkit-backdrop-filter: blur(18px);
+border: 1px solid rgba(6,182,212,.15);
+box-shadow:
+inset 0 1px 1px rgba(255,255,255,.05),
+0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ==========================================================================
+🚀 PREMIUM CARD EFFECTS
+========================================================================== */
+
 .glow-card {
-  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+position: relative;
+overflow: hidden;
+transition: all .45s ease;
+}
+
+.glow-card::before {
+content: "";
+position: absolute;
+inset: -2px;
+background:
+linear-gradient(
+135deg,
+rgba(6,182,212,.6),
+rgba(139,92,246,.6),
+rgba(6,182,212,.6)
+);
+opacity: 0;
+transition: .5s;
+filter: blur(25px);
+z-index: -1;
+}
+
+.glow-card:hover::before {
+opacity: .8;
 }
 
 .glow-card:hover {
-  border-color: rgba(6, 182, 212, 0.4) !important;
-  box-shadow: 
-    0 0 30px rgba(6, 182, 212, 0.15),
-    0 10px 30px rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Real-time Text Flow Gradient Keyframes Engine */
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-gradient-x {
-  background-size: 200% 200%;
-  animation: gradient-shift 6s ease infinite;
+transform: translateY(-12px) scale(1.02);
+border-color: rgba(6,182,212,.6);
+box-shadow:
+0 0 30px rgba(6,182,212,.35),
+0 0 70px rgba(139,92,246,.25);
 }
 
 /* ==========================================================================
-   🎛️ Custom Structural Scroll Tracker
-   ========================================================================== */
+✨ ACTIVE NAVBAR EFFECT
+========================================================================== */
+
+.active-nav-link {
+color: #22d3ee;
+text-shadow:
+0 0 10px #22d3ee,
+0 0 20px #22d3ee,
+0 0 40px #22d3ee;
+}
+
+.active-nav-indicator {
+box-shadow:
+0 0 10px #22d3ee,
+0 0 20px #22d3ee,
+0 0 40px #22d3ee;
+}
+
+/* ==========================================================================
+👤 PROFILE GLOW
+========================================================================== */
+
+.profile-glow {
+border-radius: 999px;
+animation: floating 4s ease-in-out infinite;
+box-shadow:
+0 0 30px rgba(34,211,238,.5),
+0 0 60px rgba(34,211,238,.4),
+0 0 120px rgba(34,211,238,.2);
+}
+
+@keyframes floating {
+0% {
+transform: translateY(0px);
+}
+
+50% {
+transform: translateY(-12px);
+}
+
+100% {
+transform: translateY(0px);
+}
+}
+
+/* ==========================================================================
+🌈 TEXT GRADIENT ANIMATION
+========================================================================== */
+
+@keyframes gradient-shift {
+0% {
+background-position: 0% 50%;
+}
+
+50% {
+background-position: 100% 50%;
+}
+
+100% {
+background-position: 0% 50%;
+}
+}
+
+.animate-gradient-x {
+background-size: 200% 200%;
+animation: gradient-shift 6s ease infinite;
+}
+
+/* ==========================================================================
+🔘 BUTTON EFFECTS
+========================================================================== */
+
+.premium-btn {
+transition: all .4s ease;
+}
+
+.premium-btn:hover {
+transform: translateY(-4px) scale(1.04);
+box-shadow:
+0 0 25px rgba(6,182,212,.4),
+0 0 50px rgba(139,92,246,.25);
+}
+
+/* ==========================================================================
+🎛️ SCROLLBAR
+========================================================================== */
 
 ::-webkit-scrollbar {
-  width: 6px;
+width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020208;
+background: #020208;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #06b6d4, #8b5cf6);
-  border-radius: 10px;
+background:
+linear-gradient(
+180deg,
+#06b6d4,
+#8b5cf6
+);
+border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background:
+linear-gradient(
+180deg,
+#22d3ee,
+#a855f7
+);
 }
