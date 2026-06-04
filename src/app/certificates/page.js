@@ -55,7 +55,7 @@ const credentialRegistry = [
     scope:
       "Certified as an Associate Data Scientist by DataCamp, demonstrating proficiency in data cleaning, statistical analysis, machine learning fundamentals, visualization, and business-focused data problem solving.",
     icon: "🚀",
-    pdfPath: "/certificates/DataCamp-Associate-DS.pdf",
+    pdfPath: "/certificates/DS-DataCamp.pdf",
   },
 ];
 
