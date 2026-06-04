@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "../../components/Navbar";
+import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
 
 const dataProjects = [
@@ -39,6 +39,15 @@ const dataProjects = [
     tech: ["Machine Learning", "Linear Models", "NumPy", "Matplotlib"],
     notebook: "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction/blob/main/CodeAlpha_Sales_Prediction.ipynb",
     repo: "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
+  },
+  {
+    title: "IPL Legends Analytics",
+    type: "Sports Data Intelligence",
+    description: "Analyzed historical IPL performance metrics to extract key success patterns and player efficacy. Utilized aggregate statistical modeling to visualize long-term consistency trends.",
+    metrics: [{ label: "Dataset Scope", val: "Historical" }, { label: "Key Insight", val: "Efficiency" }],
+    tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+    notebook: "https://github.com/yashshelke9129-droid/IPL_Legends/blob/78354700a673d39abcad98c196e5327ae00ce96d/IPL_Legends_Analytics.ipynb", 
+    repo: "https://github.com/yashshelke9129-droid/IPL_Legends" // Add your GitHub repository link here
   }
 ];
 
@@ -82,7 +91,6 @@ export default function Projects() {
                     {proj.type}
                   </span>
                   
-                  {/* Dynamic Metric Box */}
                   <div className="flex gap-4">
                     {proj.metrics.map((m) => (
                       <div key={m.label} className="text-right">
@@ -98,7 +106,6 @@ export default function Projects() {
               </div>
 
               <div>
-                {/* Tech Chips */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {proj.tech.map((t) => (
                     <span key={t} className="text-[11px] font-medium bg-slate-900 text-slate-300 px-2.5 py-1 rounded-md border border-slate-800">
@@ -107,13 +114,12 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Performance Action Links */}
                 <div className="flex items-center gap-4">
                   <a
                     href={proj.notebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 text-center bg-cyan-500 hover:bg-cyan-400 text-[#020208] text-xs font-bold py-3 rounded-xl transition-all tracking-wider uppercase"
+                    className="flex-1 text-center bg-cyan-500 hover:bg-cyan-400 text-[#020617] text-xs font-bold py-3 rounded-xl transition-all tracking-wider uppercase"
                   >
                     Analyze Notebook
                   </a>

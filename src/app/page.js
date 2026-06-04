@@ -97,12 +97,12 @@ export default function Home() {
               className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8"
             >
               <div className="premium-glass glow-card rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-cyan-400">4+</h3>
+                <h3 className="text-3xl font-black text-cyan-400">5+</h3>
                 <p className="text-slate-400 text-sm">Projects</p>
               </div>
 
               <div className="premium-glass glow-card rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-cyan-400">3+</h3>
+                <h3 className="text-3xl font-black text-cyan-400">6+</h3>
                 <p className="text-slate-400 text-sm">Certificates</p>
               </div>
 
