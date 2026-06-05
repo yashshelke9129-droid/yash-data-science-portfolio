@@ -97,7 +97,7 @@ export default function Home() {
               className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8"
             >
               <div className="premium-glass glow-card rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-cyan-400">5+</h3>
+                <h3 className="text-3xl font-black text-cyan-400">6+</h3>
                 <p className="text-slate-400 text-sm">Projects</p>
               </div>
 
@@ -197,51 +197,73 @@ export default function Home() {
       </main>
 
       {/* FEATURED PROJECT */}
-      <section className="max-w-7xl mx-auto px-6 pb-24">
-        <div className="premium-glass glow-card rounded-3xl p-10">
+<section className="max-w-7xl mx-auto px-6 pb-24">
+  <div className="premium-glass glow-card rounded-3xl p-10">
 
-          <p className="text-cyan-400 uppercase tracking-widest text-sm mb-3">
-            Featured Project
-          </p>
+    <p className="text-cyan-400 uppercase tracking-widest text-sm mb-3">
+      Featured Project
+    </p>
 
-          <h2 className="text-4xl font-black text-white mb-4">
-            Car Price Prediction
-          </h2>
+    <h2 className="text-4xl font-black text-white mb-4">
+      Digital India Dashboard
+    </h2>
 
-          <p className="text-slate-400 max-w-3xl mb-6">
-            Developed a machine learning model capable of predicting
-            vehicle prices using real-world marketplace datasets.
-            Leveraged feature engineering, data preprocessing,
-            regression algorithms, and model optimization techniques
-            to improve predictive performance.
-          </p>
+    <p className="text-slate-400 max-w-3xl mb-6">
+      Built an interactive analytics dashboard showcasing India's digital
+      transformation over the last two decades. Integrated datasets covering
+      internet penetration, smartphone adoption, UPI transactions, digital
+      payments, literacy growth, and GDP trends to generate actionable insights
+      through data visualization, forecasting, and business intelligence.
+    </p>
 
-          <div className="flex flex-wrap gap-3 mb-8">
-            <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
-              Python
-            </span>
+    <div className="flex flex-wrap gap-3 mb-8">
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Python
+      </span>
 
-            <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
-              Pandas
-            </span>
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Pandas
+      </span>
 
-            <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
-              Scikit-Learn
-            </span>
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Plotly
+      </span>
 
-            <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
-              Machine Learning
-            </span>
-          </div>
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Streamlit
+      </span>
 
-          <Link
-            href="/projects"
-            className="premium-btn inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-[#020208] font-bold rounded-xl"
-          >
-            View Project
-          </Link>
-        </div>
-      </section>
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Data Analytics
+      </span>
+
+      <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400">
+        Forecasting
+      </span>
+    </div>
+
+    <div className="flex flex-wrap gap-4">
+      <a
+        href="https://digital-india-dashboard-ngvazdxdbefjr2vxvg8sse.streamlit.app/"
+        target="_blank"
+        rel="noreferrer"
+        className="premium-btn inline-block px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-[#020208] font-bold rounded-xl"
+      >
+        Live Dashboard
+      </a>
+
+      <a
+        href="https://github.com/yashshelke9129-droid/Digital-India-Dashboard"
+        target="_blank"
+        rel="noreferrer"
+        className="px-8 py-4 bg-slate-900 border border-slate-800 text-slate-200 rounded-xl hover:bg-slate-800 transition-all"
+      >
+        Source Code
+      </a>
+    </div>
+
+  </div>
+</section>
     </>
   );
 }

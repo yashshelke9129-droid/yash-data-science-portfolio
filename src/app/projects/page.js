@@ -5,49 +5,106 @@ import { motion } from "framer-motion";
 
 const dataProjects = [
   {
+    title: "Digital India Dashboard",
+    type: "National Data Analytics Dashboard",
+    description:
+      "Built a comprehensive analytics dashboard exploring India's digital transformation over the last two decades. Combined datasets covering internet penetration, smartphone adoption, UPI transactions, digital payments, literacy growth, and GDP trends to generate actionable insights through interactive visualizations and data storytelling.",
+    metrics: [
+      { label: "Time Span", val: "20+ Years" },
+      { label: "Data Sources", val: "6+" }
+    ],
+    tech: [
+      "Python",
+      "Pandas",
+      "Plotly",
+      "Streamlit",
+      "Data Analytics",
+      "Data Visualization"
+    ],
+    notebook:
+      "https://digital-india-dashboard-ngvazdxdbefjr2vxvg8sse.streamlit.app/",
+    repo:
+      "https://github.com/yashshelke9129-droid/Digital-India-Dashboard"
+  },
+
+  {
     title: "Student Result Analysis",
     type: "Exploratory Data Analysis (EDA)",
-    description: "Conducted exhaustive statistical slicing on student batches to decipher underlying parameters determining academic success variables. Built multi-tier regression mappings to mitigate retention friction.",
-    metrics: [{ label: "Data Slices", val: "15k+ Records" }, { label: "Variables", val: "22 Features" }],
+    description:
+      "Conducted exhaustive statistical slicing on student batches to decipher underlying parameters determining academic success variables. Built multi-tier regression mappings to mitigate retention friction.",
+    metrics: [
+      { label: "Data Slices", val: "15k+ Records" },
+      { label: "Variables", val: "22 Features" }
+    ],
     tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    notebook: "https://github.com/yashshelke9129-droid/student-result-analysis/blob/main/Result.ipynb",
-    repo: "https://github.com/yashshelke9129-droid/student-result-analysis"
+    notebook:
+      "https://github.com/yashshelke9129-droid/student-result-analysis/blob/main/Result.ipynb",
+    repo:
+      "https://github.com/yashshelke9129-droid/student-result-analysis"
   },
+
   {
     title: "Iris Flower Classification",
     type: "Supervised Learning Pipeline",
-    description: "Evaluated high-accuracy hyperparameter loops to catalog botanical taxonomy. Handled features isolation and cross-validation matrix testing across multiclass targets.",
-    metrics: [{ label: "Model Accuracy", val: "98.6%" }, { label: "F1 Score", val: "0.98" }],
+    description:
+      "Evaluated high-accuracy hyperparameter loops to catalog botanical taxonomy. Handled features isolation and cross-validation matrix testing across multiclass targets.",
+    metrics: [
+      { label: "Model Accuracy", val: "98.6%" },
+      { label: "F1 Score", val: "0.98" }
+    ],
     tech: ["Scikit-Learn", "Python", "Feature Engineering", "K-Fold CV"],
-    notebook: "https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification/blob/main/CodeAlpha_Iris_Flower_Classification.ipynb",
-    repo: "https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
+    notebook:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification/blob/main/CodeAlpha_Iris_Flower_Classification.ipynb",
+    repo:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Iris_Flower_Classification"
   },
+
   {
     title: "Car Price Prediction",
     type: "Predictive Regression Model",
-    description: "Implemented a clean machine learning regression pipeline designed to accurately predict automobile market values by cleaning unstructured, high-cardinality marketplace data.",
-    metrics: [{ label: "R² Variance Score", val: "0.91" }, { label: "MAE", val: "Low Deviation" }],
+    description:
+      "Implemented a clean machine learning regression pipeline designed to accurately predict automobile market values by cleaning unstructured, high-cardinality marketplace data.",
+    metrics: [
+      { label: "R² Variance Score", val: "0.91" },
+      { label: "MAE", val: "Low Deviation" }
+    ],
     tech: ["Random Forest", "Python", "Data Wrangling", "Pandas"],
-    notebook: "https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction/blob/main/CodeAlpha_Car_Price_Prediction.ipynb",
-    repo: "https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
+    notebook:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction/blob/main/CodeAlpha_Car_Price_Prediction.ipynb",
+    repo:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Car_Price_Prediction"
   },
+
   {
     title: "Sales Forecasting Model",
     type: "Time-Series Predictive Analytics",
-    description: "Modeled corporate retail parameters to accurately calculate demand curves and future revenue trajectories. Managed structural components like moving averages and seasonal shifts.",
-    metrics: [{ label: "Forecast Interval", val: "Quarterly" }, { label: "Confidence", val: "94%" }],
+    description:
+      "Modeled corporate retail parameters to accurately calculate demand curves and future revenue trajectories. Managed structural components like moving averages and seasonal shifts.",
+    metrics: [
+      { label: "Forecast Interval", val: "Quarterly" },
+      { label: "Confidence", val: "94%" }
+    ],
     tech: ["Machine Learning", "Linear Models", "NumPy", "Matplotlib"],
-    notebook: "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction/blob/main/CodeAlpha_Sales_Prediction.ipynb",
-    repo: "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
+    notebook:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction/blob/main/CodeAlpha_Sales_Prediction.ipynb",
+    repo:
+      "https://github.com/yashshelke9129-droid/CodeAlpha_Sales_Prediction"
   },
+
   {
     title: "IPL Legends Analytics",
     type: "Sports Data Intelligence",
-    description: "Analyzed historical IPL performance metrics to extract key success patterns and player efficacy. Utilized aggregate statistical modeling to visualize long-term consistency trends.",
-    metrics: [{ label: "Dataset Scope", val: "Historical" }, { label: "Key Insight", val: "Efficiency" }],
+    description:
+      "Analyzed historical IPL performance metrics to extract key success patterns and player efficacy. Utilized aggregate statistical modeling to visualize long-term consistency trends.",
+    metrics: [
+      { label: "Dataset Scope", val: "Historical" },
+      { label: "Key Insight", val: "Efficiency" }
+    ],
     tech: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    notebook: "https://github.com/yashshelke9129-droid/IPL_Legends/blob/78354700a673d39abcad98c196e5327ae00ce96d/IPL_Legends_Analytics.ipynb", 
-    repo: "https://github.com/yashshelke9129-droid/IPL_Legends" // Add your GitHub repository link here
+    notebook:
+      "https://github.com/yashshelke9129-droid/IPL_Legends/blob/78354700a673d39abcad98c196e5327ae00ce96d/IPL_Legends_Analytics.ipynb",
+    repo:
+      "https://github.com/yashshelke9129-droid/IPL_Legends"
   }
 ];
 
@@ -56,23 +113,24 @@ export default function Projects() {
     <>
       <Navbar />
       <div className="mesh-bg"></div>
-      
+
       <main className="min-h-screen pt-32 pb-20 px-6 max-w-7xl mx-auto matrix-grid">
         <div className="mb-16 max-w-2xl">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-cyan-400 font-mono text-sm uppercase tracking-widest mb-3"
           >
-            Predictive Models & Insights
+            Data Analytics • Machine Learning • Visualization
           </motion.p>
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-black tracking-tight"
           >
-            Data Science Production
+            Data Science Projects
           </motion.h1>
         </div>
 
@@ -90,25 +148,37 @@ export default function Projects() {
                   <span className="text-xs font-mono px-3 py-1 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-full">
                     {proj.type}
                   </span>
-                  
+
                   <div className="flex gap-4">
                     {proj.metrics.map((m) => (
                       <div key={m.label} className="text-right">
-                        <p className="text-[10px] uppercase tracking-wider text-slate-500">{m.label}</p>
-                        <p className="text-sm font-bold font-mono text-emerald-400">{m.val}</p>
+                        <p className="text-[10px] uppercase tracking-wider text-slate-500">
+                          {m.label}
+                        </p>
+                        <p className="text-sm font-bold font-mono text-emerald-400">
+                          {m.val}
+                        </p>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">{proj.title}</h2>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">{proj.description}</p>
+                <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">
+                  {proj.title}
+                </h2>
+
+                <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                  {proj.description}
+                </p>
               </div>
 
               <div>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {proj.tech.map((t) => (
-                    <span key={t} className="text-[11px] font-medium bg-slate-900 text-slate-300 px-2.5 py-1 rounded-md border border-slate-800">
+                    <span
+                      key={t}
+                      className="text-[11px] font-medium bg-slate-900 text-slate-300 px-2.5 py-1 rounded-md border border-slate-800"
+                    >
                       {t}
                     </span>
                   ))}
@@ -121,8 +191,11 @@ export default function Projects() {
                     rel="noreferrer"
                     className="flex-1 text-center bg-cyan-500 hover:bg-cyan-400 text-[#020617] text-xs font-bold py-3 rounded-xl transition-all tracking-wider uppercase"
                   >
-                    Analyze Notebook
+                    {proj.title === "Digital India Dashboard"
+                      ? "Live Dashboard"
+                      : "Analyze Notebook"}
                   </a>
+
                   <a
                     href={proj.repo}
                     target="_blank"
