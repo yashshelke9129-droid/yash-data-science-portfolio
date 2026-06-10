@@ -50,6 +50,15 @@ const credentialRegistry = [
   },
 
   {
+    title: "Getting Started with Data",
+    issuer: "IBM SkillsBuild",
+    scope:
+      "Completed IBM SkillsBuild's Getting Started with Data program, covering foundational data concepts, data literacy, data-driven decision making, and introductory analytics skills essential for modern data science workflows.",
+    icon: "📚",
+    pdfPath: "/certificates/IBM-SkillsBuild-Data.pdf",
+  },
+
+  {
     title: "Associate Data Scientist",
     issuer: "DataCamp Certification Program",
     scope:
