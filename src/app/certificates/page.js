@@ -41,6 +41,15 @@ const credentialRegistry = [
   },
 
   {
+    title: "SQL and Relational Databases 101",
+    issuer: "IBM Developer Skills Network & Cognitive Class",
+    scope:
+      "Successfully completed SQL and Relational Databases 101 (DB0101EN), gaining practical knowledge of relational database concepts, ER modeling, primary and foreign keys, normalization, SQL queries, joins, constraints, database design principles, and hands-on database management skills.",
+    icon: "🗄️",
+    pdfPath: "/certificates/SQL-101.pdf",
+  },
+
+  {
     title: "R for Data Science",
     issuer: "IBM Developer Skills Network & Cognitive Class",
     scope:
