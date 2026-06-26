@@ -102,12 +102,12 @@ export default function Home() {
               </div>
 
               <div className="premium-glass glow-card rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-cyan-400">6+</h3>
+                <h3 className="text-3xl font-black text-cyan-400">10+</h3>
                 <p className="text-slate-400 text-sm">Certificates</p>
               </div>
 
               <div className="premium-glass glow-card rounded-2xl p-5 text-center">
-                <h3 className="text-3xl font-black text-cyan-400">1</h3>
+                <h3 className="text-3xl font-black text-cyan-400">3+</h3>
                 <p className="text-slate-400 text-sm">Internship</p>
               </div>
 
@@ -188,7 +188,7 @@ export default function Home() {
                 </span>
 
                 <span className="bg-cyan-500/10 px-2 py-1 rounded text-cyan-400 text-xs">
-                  8.5+ CGPA
+           Average 8.67+ CGPA
                 </span>
               </div>
             </div>

@@ -23,6 +23,24 @@ const credentialRegistry = [
   },
 
   {
+    title: "Data Visualisation: Empowering Business with Effective Insights",
+    issuer: "Tata Group × Forage",
+    scope:
+      "Completed Tata Group's Data Visualisation Job Simulation. Developed practical skills in framing business scenarios, selecting effective visualizations, creating impactful dashboards, and communicating business insights for executive decision-making.",
+    icon: "📊",
+    pdfPath: "/certificates/Tata-DV.pdf",
+  },
+
+  {
+    title: "GenAI Powered Data Analytics Job Simulation",
+    issuer: "Tata Group × Forage",
+    scope:
+      "Completed Tata Group's GenAI Powered Data Analytics Job Simulation. Performed exploratory data analysis, risk profiling, AI-powered delinquency prediction, business reporting, data storytelling, and implemented an AI-driven collections strategy using real-world business scenarios.",
+    icon: "🤖",
+    pdfPath: "/certificates/Tata-GenAI.pdf",
+  },
+
+  {
     title: "IBM Data Science 101",
     issuer: "IBM Developer Skills Network & Cognitive Class",
     scope:
